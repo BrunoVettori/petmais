@@ -1,14 +1,14 @@
 import { v4 as uuid } from 'uuid';
 
-let users = [];
+let users:Array<any> = [];
 
-export const getUsers = (req, res) => {
+export const getUsers = (req:any, res:any) => {
     console.log(`Users in the database: ${users}`);
 
     res.send(users);
 }
 
-export const createUser = (req, res) => {   
+export const createUser = (req:any, res:any) => {   
     const user = req.body;
 
     users.push({...user, id: uuid()});
@@ -16,17 +16,17 @@ export const createUser = (req, res) => {
     console.log(`User [${user.username}] added to the database.`);
 };
 
-export const getUser = (req, res) => {
+export const getUser = (req:any, res:any) => {
     res.send(req.params.id)
 };
 
-export const deleteUser = (req, res) => { 
+export const deleteUser = (req:any, res:any) => { 
     console.log(`user with id ${req.params.id} has been deleted`);
     
     users = users.filter((user) => user.id !== req.params.id);
 };
 
-export const updateUser =  (req,res) => {
+export const updateUser =  (req:any, res:any) => {
     const user = users.find((user) => user.id === req.params.id);
     
     user.username = req.body.username;
