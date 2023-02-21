@@ -1,0 +1,11 @@
+{
+  "name": "petmais",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "database-start": "docker run --name petmais -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=danonangus -p 5432:5432 -d postgres"
+  },
+  "author": "",
+  "license": "ISC"
+}
