@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "database-start": "docker run --name petmais -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=danonangus -p 5432:5432 -d postgres"
+    "database-start": "docker run --name petmais -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=danonangus -p 5432:5432 -d postgres",
+    "start": "nodemon index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
