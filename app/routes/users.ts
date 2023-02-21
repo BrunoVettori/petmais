@@ -1,9 +1,9 @@
 import express from 'express';
 
-import {createDono } from '../controllers/users';
+import {CreateDono} from '../controllers/users';
 
 const router = express.Router();
 
-router.post('/', createDono);
+router.post('/', CreateDono);
 
 export default router;
